@@ -65,6 +65,11 @@ void SpglslAngleWebglOutput::writeTOperatorNode(sh::TIntermOperator * node) {
 
   sh::TIntermUnary * unaryNode = node->getAsUnaryNode();
   if (unaryNode) {
+    switch (unaryNode->getOp()) {
+      case sh::EOpRadians: this->write("radians"); return;
+      case sh::EOpDegrees: this->write("degrees"); return;
+      default: break;
+    }
     const auto * fn = unaryNode->getFunction();
     if (fn) {
       this->write(this->getSymbolName(fn));

@@ -106,7 +106,10 @@
       "format": "cpp",
       "shared_mutex": "cpp",
       "strstream": "cpp",
-      "__functional_base_03": "cpp"
+      "__functional_base_03": "cpp",
+      "__verbose_abort": "cpp",
+      "execution": "cpp",
+      "print": "cpp"
     }
   }
 }
