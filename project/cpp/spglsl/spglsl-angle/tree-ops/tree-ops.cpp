@@ -230,7 +230,7 @@ bool spglsl_treeops_optimize(SpglslAngleCompiler & compiler, sh::TIntermBlock * 
     if (!sh::RemoveUnreferencedVariables(&compiler.tCompiler, root, &compiler.symbolTable)) {
       return false;
     }
-    if (!sh::SeparateDeclarations(compiler.tCompiler, *root)) {
+    if (!sh::SeparateDeclarations(compiler.tCompiler, *root, true)) {
       return false;
     }
     if (!sh::PruneEmptyCases(&compiler.tCompiler, root)) {

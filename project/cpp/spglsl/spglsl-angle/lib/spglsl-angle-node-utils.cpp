@@ -25,7 +25,6 @@ bool nodeIsConstantZero(sh::TIntermNode * node) {
 
   switch (typed->getType().getBasicType()) {
     case sh::EbtFloat:
-    case sh::EbtDouble:
     case sh::EbtInt:
     case sh::EbtUInt:
     case sh::EbtBool: break;
@@ -53,7 +52,6 @@ bool nodeIsConstantOne(sh::TIntermNode * node) {
 
   switch (typed->getType().getBasicType()) {
     case sh::EbtFloat:
-    case sh::EbtDouble:
     case sh::EbtInt:
     case sh::EbtUInt:
     case sh::EbtBool: break;

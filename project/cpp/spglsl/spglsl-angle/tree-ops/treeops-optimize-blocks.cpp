@@ -62,7 +62,7 @@ class SpglslOptimizeBlocksTraverser : public sh::TIntermTraverser {
       }
     }
     if (changed) {
-      block->replaceAllChildren(newSequence);
+      block->replaceAllChildren(std::move(newSequence));
       this->hasChanges = true;
     }
     return true;

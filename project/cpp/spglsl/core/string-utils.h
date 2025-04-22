@@ -5,6 +5,7 @@
 #include <cctype>
 #include <locale>
 #include <string>
+#include <vector>
 
 struct Strings {
   const static std::string empty;

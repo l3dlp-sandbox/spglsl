@@ -66,3 +66,20 @@ namespace angle {
   void BreakDebugger() {
   }
 };
+
+namespace gl {
+  namespace priv {
+    bool ShouldCreatePlatformLogMessage(int severity) {
+      return false;
+    }
+  }
+  
+  LogMessage::LogMessage(const char *file, const char *function, int line, LogSeverity severity) :
+    mFile(file), mFunction(function), mLine(line), mSeverity(severity)
+  {
+  }
+
+
+  LogMessage::~LogMessage() {
+  }
+};

@@ -18,6 +18,7 @@ IF(EMSCRIPTEN)
     -fno-rtti \
     -flto \
     -Wno-unused-command-line-argument \
+    -Wno-nontrivial-memcall \
     -s STRICT=1 \
     -s SAFE_HEAP=0 \
     -s EVAL_CTORS=1 \
@@ -26,6 +27,7 @@ IF(EMSCRIPTEN)
     -s NO_EXIT_RUNTIME=1 \
     -s SAFE_HEAP_LOG=0 \
     -s ABORTING_MALLOC=0 \
+    -s NO_EXIT_RUNTIME=1 \
     -s ALLOW_MEMORY_GROWTH=1 \
     -DEMSCRIPTEN_HAS_UNBOUND_TYPE_NAMES=0 \
     $ENV{EMSCRIPTEN_CUSTOM_CXX_FLAGS} \

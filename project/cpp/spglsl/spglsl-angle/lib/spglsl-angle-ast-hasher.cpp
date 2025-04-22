@@ -186,7 +186,7 @@ AngleAstHasher & AngleAstHasher::writeArraySizes(const TType & type) {
   if (!type.isArray()) {
     this->write(-1);
   } else {
-    const TSpan<const unsigned int> & arraySizes = type.getArraySizes();
+    const auto & arraySizes = type.getArraySizes();
     this->write(arraySizes.size());
     for (auto arraySizeIter = arraySizes.rbegin(); arraySizeIter != arraySizes.rend(); ++arraySizeIter) {
       this->write(*arraySizeIter);

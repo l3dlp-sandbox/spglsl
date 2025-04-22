@@ -15,7 +15,6 @@ SpglslCompileOptions::SpglslCompileOptions() :
 }
 
 SpglslCompileOptions::~SpglslCompileOptions() {
-  delete &this->angle;
 }
 
 void SpglslCompileOptions::loadFromVal(emscripten::val input, emscripten::val res) {

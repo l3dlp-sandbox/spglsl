@@ -55,7 +55,6 @@
 ../angle/src/libANGLE/VertexArray.cpp
 ../angle/src/libANGLE/VertexAttribute.cpp
 ../angle/src/libANGLE/angletypes.cpp
-../angle/src/libANGLE/context_private_call.cpp
 ../angle/src/libANGLE/es3_copy_conversion_table_autogen.cpp
 ../angle/src/libANGLE/format_map_autogen.cpp
 ../angle/src/libANGLE/formatutils.cpp
@@ -95,12 +94,10 @@
 ../angle/src/common/MemoryBuffer.cpp
 ../angle/src/common/PackedEnums.cpp
 ../angle/src/common/PoolAlloc.cpp
-../angle/src/common/RingBufferAllocator.cpp
 ../angle/src/common/SimpleMutex.cpp
 ../angle/src/common/WorkerThread.cpp
 ../angle/src/common/angleutils.cpp
 ../angle/src/common/base/anglebase/sha1.cc
-../angle/src/common/debug.cpp
 ../angle/src/common/entry_points_enum_autogen.cpp
 ../angle/src/common/mathutil.cpp
 ../angle/src/common/matrix_utils.cpp
@@ -130,6 +127,7 @@
 ../angle/src/compiler/translator/IntermNode.cpp
 ../angle/src/compiler/translator/IntermRebuild.cpp
 ../angle/src/compiler/translator/IsASTDepthBelowLimit.cpp
+../angle/src/compiler/translator/Name.cpp
 ../angle/src/compiler/translator/Operator.cpp
 ../angle/src/compiler/translator/OutputTree.cpp
 ../angle/src/compiler/translator/ParseContext.cpp
@@ -178,6 +176,7 @@
 ../angle/src/compiler/translator/tree_ops/RemoveInactiveInterfaceVariables.cpp
 ../angle/src/compiler/translator/tree_ops/RemoveInvariantDeclaration.cpp
 ../angle/src/compiler/translator/tree_ops/RemoveUnreferencedVariables.cpp
+../angle/src/compiler/translator/tree_ops/RemoveUnusedFramebufferFetch.cpp
 ../angle/src/compiler/translator/tree_ops/RescopeGlobalVariables.cpp
 ../angle/src/compiler/translator/tree_ops/RewriteArrayOfArrayOfOpaqueUniforms.cpp
 ../angle/src/compiler/translator/tree_ops/RewriteAtomicCounters.cpp
@@ -185,9 +184,8 @@
 ../angle/src/compiler/translator/tree_ops/RewritePixelLocalStorage.cpp
 ../angle/src/compiler/translator/tree_ops/RewriteStructSamplers.cpp
 ../angle/src/compiler/translator/tree_ops/RewriteTexelFetchOffset.cpp
-../angle/src/compiler/translator/tree_ops/SeparateCompoundStructDeclarations.cpp
+../angle/src/compiler/translator/tree_ops/ScalarizeVecAndMatConstructorArgs.cpp
 ../angle/src/compiler/translator/tree_ops/SeparateDeclarations.cpp
-../angle/src/compiler/translator/tree_ops/SeparateStructFromFunctionDeclarations.cpp
 ../angle/src/compiler/translator/tree_ops/SeparateStructFromUniformDeclarations.cpp
 ../angle/src/compiler/translator/tree_ops/SimplifyLoopConditions.cpp
 ../angle/src/compiler/translator/tree_ops/SplitSequenceOperator.cpp
@@ -230,7 +228,6 @@
 ../angle/src/compiler/translator/msl/MapFunctionsToDefinitions.cpp
 ../angle/src/compiler/translator/msl/MapSymbols.cpp
 ../angle/src/compiler/translator/msl/ModifyStruct.cpp
-../angle/src/compiler/translator/msl/Name.cpp
 ../angle/src/compiler/translator/msl/Pipeline.cpp
 ../angle/src/compiler/translator/msl/ProgramPrelude.cpp
 ../angle/src/compiler/translator/msl/RewritePipelines.cpp
@@ -244,7 +241,6 @@
 ../angle/src/compiler/translator/tree_ops/msl/GuardFragDepthWrite.cpp
 ../angle/src/compiler/translator/tree_ops/msl/HoistConstants.cpp
 ../angle/src/compiler/translator/tree_ops/msl/IntroduceVertexIndexID.cpp
-../angle/src/compiler/translator/tree_ops/msl/NameEmbeddedUniformStructsMetal.cpp
 ../angle/src/compiler/translator/tree_ops/msl/ReduceInterfaceBlocks.cpp
 ../angle/src/compiler/translator/tree_ops/msl/RewriteCaseDeclarations.cpp
 ../angle/src/compiler/translator/tree_ops/msl/RewriteInterpolants.cpp

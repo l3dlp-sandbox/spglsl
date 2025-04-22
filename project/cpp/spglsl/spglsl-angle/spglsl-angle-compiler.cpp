@@ -115,7 +115,7 @@ bool SpglslAngleCompiler::_checkAndSimplifyAST(sh::TIntermBlock * root, const sh
   }
 
   if (this->compilerOptions.compileMode == SpglslCompileMode::Optimize) {
-    if (!SeparateDeclarations(this->tCompiler, *root)) {
+    if (!SeparateDeclarations(this->tCompiler, *root, true)) {
       return false;
     }
 
