@@ -2,7 +2,7 @@ import express from "express";
 import path from "path";
 import fs from "fs";
 import util from "util";
-import cheerio from "cheerio";
+import * as cheerio from "cheerio";
 import { conformanceTests, ConformanceTest } from "./conformance-test-list";
 import type { IncomingMessage, ServerResponse } from "http";
 import { spglslAngleCompile } from "spglsl";
@@ -65,6 +65,7 @@ function _serveIndex() {
 }
 
 async function _serveTestFile(test: ConformanceTest): Promise<string> {
+  console.log("cheerio", cheerio);
   const $ = cheerio.load(await fs.promises.readFile(test.filepath, "utf8"));
 
   let scriptInjected = false;

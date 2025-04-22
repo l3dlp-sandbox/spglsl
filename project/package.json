@@ -17,8 +17,8 @@
   ],
   "scripts": {
     "test": "mocha --recursive --require @swc-node/register \"test/**/*.test.ts\"",
-    "conformance-test-server": "node -r @swc-node/register ./conformance/conformance-test-server-start.ts",
-    "conformance-tests": "node -r @swc-node/register ./conformance/conformance-test-runner.ts",
+    "conformance-test-server": "npx tsx ./conformance/conformance-test-server-start.ts",
+    "conformance-tests": "npx tsx ./conformance/conformance-test-runner.ts",
     "precommit": "lint-staged && ./scripts/build-ts.sh",
     "lint": "eslint --no-error-on-unmatched-pattern --fix . && prettier --write . --log-level=warn"
   },
@@ -58,6 +58,7 @@
     "prettier": "^3.2.5",
     "puppeteer": "^24.7.0",
     "ts-node": "^10.9.2",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "tsx": "^4.19.3"
   }
 }
